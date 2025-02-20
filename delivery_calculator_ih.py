@@ -9,4 +9,3 @@ def delivery_cost():
     final_total = order_total+miles_tax
     print(f'Total to be collected: {round(final_total,2)}')
 delivery_cost()
-    
