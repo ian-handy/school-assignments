@@ -1,0 +1,17 @@
+[3 points total] What code is able to determine what the username is without asking the user for input?
+    *Line 75, "userName = System.getProperty("user.name");"
+[3 points total] If it cannot determine the username, what will it use for a username instead?
+    *A random selection between "Rockstar", "Fam", "Bug", or "Old Bean".
+[4 points total] What set of classes are used to determine the time and date? Do not include DateTimeFormatter a one of the classes.
+    *ZoneId and ZonedDateTime
+[10 points total] After you run the program at least once, you’ll notice new comments at the bottom of your code (do not delete it). The first 3 lines contain 3 different hash function sequences.  MD5 always produces 16 numbers no matter what it is provided with to “hash”. SHA1 always produces 20 numbers no matter what it is provided with to “hash”. SHA256 always produces 32 numbers no matter what it is provided with to “hash”. Each number is a byte in size, which is to say each number can only be between -128 to 127. 
+Is it possible to have 2 different items to hash that produce the same sequence of numbers?(2 points)
+    *Yes, there are only so many sequences of numbers that it can produce and infinite possible items
+Which hash function produces the most potential sequence combinations? (2 points)
+    *SHA256, it contains the most numbers and therefor the most potential sequence combinations
+Give a practical example of where these hash functions are used. (4 points)
+    *Verifying files when downloading something off of the internet
+Is it possible to turn these hash values sequences back into their original data? (2 points)
+    *No, almost all information is lost when hashed
+[10 points total] The block comment after SHA256 contains the encrypted output (or multiple outputs depending how many times you have run it) using the public key from the class PublicKeyEncryption.java.  Comment on how much this data “looks like” the output message from main. (5 points)  Do you think you could generate the private key before this assignment is due? (5 points)
+    *It looks nothing like the terminal output. There is almost no chance of me being able to decrypt the private key before the assignment is due.

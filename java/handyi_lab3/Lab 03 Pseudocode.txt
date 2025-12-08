@@ -1,0 +1,12 @@
+//Step 1. Create function to format doubles into currency.
+//Step 2. Declare Scanner
+//Step 3. Get input for voltage
+//Step 4. Get input for amps
+//Step 5. Get input for kwh charge
+//Step 6. Get input for no. minutes device is on
+//Step 7. Get input for no. days device is on
+//Step 8. Calculate/print Watts (amperage * voltage)
+//Step 9. Calculate/print Kilowatts (Watts/1000)
+//Step 10. Calculate/print kw/day (kw * (minutes on/60))
+//Step 11. Calculate/print cost per day (kw/day * kwh charge)
+//Step 12. Calculate/print projected total cost (cost per day * days on)

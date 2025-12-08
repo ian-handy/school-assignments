@@ -1,0 +1,13 @@
+Delcare scanner
+Prompt to get windSpeed
+Prompt to get maxGustv
+Change maxGust to 1 if user entered 0
+Prompt to get level of detail
+Close scanner
+Define windSpeed categories
+Define maxGust categories
+Define cyclone facts
+Determine category of windspeed
+Calculate gustPercent
+Determine category of gustPercent
+Check which level of detail to use and return calculated results
