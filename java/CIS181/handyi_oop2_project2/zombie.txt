@@ -1,0 +1,18 @@
+Zombies pound on your door. 1 = Barricade 2 = Flee out the back
+false
+The door holds, but for how long? 1 = Grab weapons 2 = Hide in the basement
+false
+You arm up as the door breaks. 1 = Charge outside 2 = Retreat upstairs
+false
+You fight bravely in the yard. 1 = Push to the street 2 = Guard the entry
+false
+You reach a rescue truck. You survive!
+true
+You hold until help arrives, exhausted but alive.
+true
+You fall from the second-floor window. Game Over!
+true
+You suffocate hiding too long. Game Over!
+true
+You run to the woods and find a safe camp.
+true

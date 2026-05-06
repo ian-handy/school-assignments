@@ -1,0 +1,41 @@
+Tree Build Order Analysis
+Ian Handy — 2026-04-24
+
+recursivelyBuildTree creates nodes in pre-order:
+  1. Create node
+  2. If not an ending, recurse into option1 (whole subtree) first
+  3. Then recurse into option2
+
+So for the tree shape in BinaryTreeFillIn.pdf (left subtree deeper, right subtree
+two leaves), numbering top to bottom, left to right:
+
+                          1 (root)
+                         / \
+                        /   \
+                       2     11
+                      / \    / \
+                     3   4  12 13
+                        / \
+                       5   6
+                          / \
+                         7   10
+                        / \
+                       8   9
+
+Node 1  = head
+Node 2  = head.option1
+Node 3  = head.option1.option1 (leaf)
+Node 4  = head.option1.option2
+Node 5  = head.option1.option2.option1 (leaf — shown by the off-page arrow)
+Node 6  = head.option1.option2.option2
+Node 7  = head.option1.option2.option2.option1
+Node 8  = ...option1.option2.option2.option1.option1 (leaf)
+Node 9  = ...option1.option2.option2.option1.option2 (leaf)
+Node 10 = head.option1.option2.option2.option2 (leaf)
+Node 11 = head.option2
+Node 12 = head.option2.option1 (leaf)
+Node 13 = head.option2.option2 (leaf)
+
+recursiveSave writes in the same pre-order, which is why recursiveLoad can
+reconstruct the tree by reading the same sequence: read message + ending flag,
+if not ending recurse for option1, then recurse for option2.

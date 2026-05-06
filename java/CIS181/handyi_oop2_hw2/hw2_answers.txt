@@ -1,0 +1,77 @@
+Homework 2
+
+Ian Handy
+
+Grammar for boolean relational expressions:
+ 
+1. S > S < S
+2. S > S <= S
+3. S > S > S
+4. S > S >= S
+5. S > S == S
+6. S > S != S
+7. S > n
+
+
+
+2. Extended grammar (adding arithmetic):
+
+1. S > S + S
+2. S > S - S
+3. S > S * S
+4. S > S / S
+5. S > (S)
+
+Expression: (9 + 1/5) <= (9*3/6 + 1)
+
+S
+|-- S
+|  |-- ( S )
+|          |-- S + S
+|              |-- 9
+|              |-- S / S
+|                  |-- 1
+|                  |-- 5
+|-- <=
+|-- S
+    |-- ( S )
+            |-- S + S
+                |-- S / S
+                |  |-- S * S
+                |  |  |-- 9
+                |  |  |-- 3
+                |  |-- 6
+                |-- 1
+
+The root applies rule 2 (S > S <= S). Each side is a parenthesized expression (S > (S)), which expands into addition. Left side: 9 + (1/5). Right side: (9*3/6) + 1, where the division's left operand is itself a multiplication.
+
+3. 
+
+<=
+|-- +
+|  |-- 9
+|  |-- /
+|      |-- 1
+|      |-- 5
+|-- +
+    |-- /
+    |  |-- *
+    |  |  |-- 9
+    |  |  |-- 3
+    |  |-- 6
+    |-- 1
+
+The AST drops the parentheses and intermediate S nodes, only operators and values remain. Parentheses aren't needed because the tree structure already encodes evaluation order: leaf nodes evaluate before their parents, so nesting handles precedence implicitly.
+
+
+4. Expression: (1 * 9 - ) < 40
+
+|-- -  < missing right operand
+|  |-- *
+|      |-- 1
+|      |--9
+|-- 40
+
+The < node builds fine: right side is 40, left side starts parsing (1 * 9). The * node gets both operands 1 and 9. But - is a binary operator — it needs two children. When the compiler looks for the right operand, it finds ) instead. The tree can't be completed.
+
+This is why ASTs produce useful error messages. The compiler isn't just scanning text — it's trying to build a tree. When it reaches `-` and expects a right-hand expression, finding ) tells it exactly what's missing and where. Instead of a vague "syntax error," it can say something like: expected expression after '-' operator.

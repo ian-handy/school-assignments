@@ -1,0 +1,18 @@
+Your ship detects a strange signal. 1 = Investigate 2 = Ignore it
+false
+You find a derelict station. 1 = Board it 2 = Scan from afar
+false
+Inside, the lights flicker. 1 = Head to the bridge 2 = Head to the cargo bay
+false
+A damaged AI asks for help. 1 = Repair it 2 = Shut it down
+false
+The AI reveals a hidden jump route. You return home rich. You win!
+true
+The station explodes. You barely escape. Game Over!
+true
+You find a crate of medicine and sell it for a profit.
+true
+The reactor blows and shrapnel cripples your ship. Game Over!
+true
+You reach port with a routine haul.
+true

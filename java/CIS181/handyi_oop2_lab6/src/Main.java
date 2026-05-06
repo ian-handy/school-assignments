@@ -23,21 +23,21 @@ public class Main {
 		System.out.println("\nPrinting Island Residents!\n");
 		simpleList.printList();
 
-		System.out.println("\nRemoving Paddy from list!\n");
-		simpleList.remove("Paddy");
+		// System.out.println("\nRemoving Paddy from list!\n");
+		// simpleList.remove("Paddy");
 
-		simpleList.printList();
-		simpleList = simpleList.shuffleAndFilter();
-		System.out.println("\nShuffling and filtering: ");
-		simpleList.printList();
+		// simpleList.printList();
+		// simpleList = simpleList.shuffleAndFilter();
+		// System.out.println("\nShuffling and filtering: ");
+		// simpleList.printList();
 
-		System.out.println("\nPrinting Island Residents!\n");
-		simpleList.printList();
+		// System.out.println("\nPrinting Island Residents!\n");
+		// simpleList.printList();
 
 
-		System.out.println("\nShuffling and filtering and reprinting Island Residents:");
-		simpleList = simpleList.shuffleAndFilter();
-		simpleList.printList();
+		// System.out.println("\nShuffling and filtering and reprinting Island Residents:");
+		// simpleList = simpleList.shuffleAndFilter();
+		// simpleList.printList();
 	}
 
 	public static void addNames(String[] n, VillagerListInterface a)

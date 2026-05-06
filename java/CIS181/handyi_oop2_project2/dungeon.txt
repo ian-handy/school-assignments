@@ -1,0 +1,18 @@
+You stand before a dark dungeon. 1 = Enter 2 = Leave
+false
+You see torches on the walls. 1 = Go left 2 = Go right
+false
+A goblin blocks your path. 1 = Fight 2 = Sneak past
+false
+You slay the goblin and find a key. 1 = Try the iron door 2 = Go back
+false
+The key opens a chest of gold. You win!
+true
+You leave the dungeon with nothing. Game Over!
+true
+You trip a wire and an arrow strikes you. You died!
+true
+You fall into a hidden pit. Game Over!
+true
+You go home safe but empty-handed.
+true
